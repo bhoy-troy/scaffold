@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=2yhh4bj%%^cat#awanuj(x3@4qphi%a@q3&ak0eyj4+=fam@e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', False)
 
 # AUTH_USER_MODEL = 'core.User'
 
@@ -150,7 +150,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, './static'),
 ]
-
 # Debug toolbar settings
 # if DEBUG:
 #    INSTALLED_APPS.append('debug_toolbar')
@@ -158,7 +157,7 @@ STATICFILES_DIRS = [
 #    DEBUG_TOOLBAR_CONFIG = {
 #        'INTERCEPT_REDIRECTS': False,
 #    }
-
+#
 
 HIJACK_ALLOW_GET_REQUESTS = True
 HIJACK_LOGIN_REDIRECT_URL = '/'
