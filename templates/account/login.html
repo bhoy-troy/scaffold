@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{#{% load static %}#}
+{#{% load staticfiles %}#}
+{% load account_tags %}
+
+{% block title %}Login{% endblock %}
+
+{% block container %}
+
+    <div class="container login">
+
+        <div class="row" id="pwd-container">
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4">
+                <section class="login-form">
+                    <form method="post" action={% url 'account_login' %} role="login">
+                        {% csrf_token %}
+                        {% include 'logo.html' %}
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="text" class="form-control input-lg" placeholder="Username">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input type="password" name="password" class="form-control input-lg" id="password"
+                                   placeholder="Password" required/>
+                        </div>
+
+                        <button type="submit" name="submit" class="btn btn-lg btn-primary btn-block">Sign in</button>
+                        <div>
+                            <a href="#">Create account</a> or
+                            <a href="{% url 'account_password_reset' %}">Reset Password</a>
+                        </div>
+
+                    </form>
+                </section>
+            </div>
+
+        </div>
+
+
+    </div>
+{% endblock %}

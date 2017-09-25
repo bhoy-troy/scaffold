@@ -1,0 +1,1 @@
+url(r"^accounts/login/", user_profile.CustomLoginView.as_view(), name='login'),

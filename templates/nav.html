@@ -1,0 +1,118 @@
+{#<div class="navbar-wrapper">#}
+{#    <div class="container-fluid">#}
+{#        <nav class="navbar navbar-fixed-top">#}
+{#            <div class="container">#}
+{#                <div class="navbar-header">#}
+{#                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">#}
+{#                    <span class="sr-only">Toggle navigation</span>#}
+{#                    <span class="icon-bar"></span>#}
+{#                    <span class="icon-bar"></span>#}
+{#                    <span class="icon-bar"></span>#}
+{#                    </button>#}
+{#                </div>#}
+{#                <div id="navbar" class="navbar-collapse collapse">#}
+{#                    <ul class="nav navbar-nav">#}
+{#                        <li class="active"><a href="#" class=""><i class="fa fa-tachometer fa-fw"></i>Dashboard</a></li>#}
+{##}
+{#                        <li><a href="#"><i class="fa fa-bank fa-fw" aria-hidden="true"></i>Stores</a></li>#}
+{#                        <li><a href="#"><i class="fa fa-bell fa-fw" aria-hidden="true"></i>Alarms</a></li>#}
+{#                        <li><a href="#"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>Configuration</a></li>#}
+{#                        <li><a href="#"><i class="fa fa-thermometer-half fa-fw"  aria-hidden="true"></i>Calibration</a></li>#}
+{##}
+{##}
+{##}
+{#                    </ul>#}
+{#                    <ul class="user-nav nav navbar-nav navbar-right">#}
+{#                        {% if user.is_authenticated %}#}
+{#                        <li class=" dropdown">#}
+{#                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">#}
+{#                                <i class="fa fa-user fa-2x fa-fw"></i>{{ user.username }}<span class="fa fa-caret-down fa-fw"></span>#}
+{#                            </a>#}
+{#                            <ul class="dropdown-menu">#}
+{#                                <li><a href="#"><i class="fa fa-wrench fa-fw" aria-hidden="true"></i> Settings</a></li>#}
+{#                                {% if user.is_superuser %}#}
+{#                                <li><a href="#"><i class="fa fa-superpowers fa-fw" aria-hidden="true"></i>Admin</a></li>#}
+{#                                    {% endif %}#}
+{#                                <li><a href="{% url 'account_logout' %}"><i class="fa fa-lock fa-fw" aria-hidden="true"></i>Logout</a></li>#}
+{#                            </ul>#}
+{#                        </li>#}
+{#                        {% else %}#}
+{#                        <li><a href="{% url 'account_login' %}"><i class="fa fa-unlock fa-fw" aria-hidden="true"></i>Login</a></li>#}
+{#                        {% endif %}#}
+{##}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#        </nav>#}
+{#    </div>#}
+{#</div>#}
+
+{#<div class="container">#}
+{#  <nav class="navbar navbar-default">#}
+{#    <div class="container-fluid">#}
+{#      <div class="navbar-header">#}
+{#        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">#}
+{#          <span class="sr-only">Toggle navigation</span>#}
+{#          <span class="icon-bar"></span>#}
+{#          <span class="icon-bar"></span>#}
+{#          <span class="icon-bar"></span>#}
+{#        </button>#}
+{#        <a class="navbar-brand" href="http://disputebills.com"><img src="https://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png" alt="Dispute Bills">#}
+{#        </a>#}
+{#      </div>#}
+{#      <div id="navbar1" class="navbar-collapse collapse">#}
+{#        <ul class="nav navbar-nav">#}
+{#          <li class="active"><a href="#">Home</a></li>#}
+{#          <li><a href="#">About</a></li>#}
+{#          <li><a href="#">Contact</a></li>#}
+{#          <li class="dropdown pull-right">#}
+{#            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">#}
+{#                 <i class="fa fa-user fa-fw"></i>{{ user.username }}<span class="fa fa-caret-down fa-fw"></span></a>#}
+{#            <ul class="dropdown-menu" role="menu">#}
+{#              <li><a href="#">Action</a></li>#}
+{#              <li><a href="#">Another action</a></li>#}
+{#              <li><a href="#">Something else here</a></li>#}
+{#            </ul>#}
+{#          </li>#}
+{#        </ul>#}
+{#      </div>#}
+{#      <!--/.nav-collapse -->#}
+{#    </div>#}
+{#    <!--/.container-fluid -->#}
+{#  </nav>#}
+{#</div>#}
+{##}
+
+<nav class="navbar navbar-default navbar-fixed-top" >
+    <div class="container">
+        <div class="navbar-header" >
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only" >Toggle navigation</span>
+                <span class="icon-bar" ></span>
+                <span class="icon-bar" ></span>
+                <span class="icon-bar" ></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav" >
+                <li><a class="link-dashboard navbar-link" href="//live.zeto.ie/console/dashboard/">Dashboard</a></li>
+                <li class="active" ><a class="link-stores navbar-link active" href="#stores">Stores</a></li>
+                <li><a class="link-alarms navbar-link" href="//live.zeto.ie/console/alarms/"  >Alarms<span class="alarm-count">67</span></a>
+                </li>
+                <li  ><a class="link-configuration navbar-link" href="//live.zeto.ie/console/configuration/users/">Configuration</a></li>
+                <li ><a class="link-calibration navbar-link" href="#calibration" >Calibration</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" >
+                <div class="dropdown btn-group" ><a href="#" class="dropdown-user dropdown-toggle" id="dropdown-user">{{ user.username }} | Zeto</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="settings-link" href="#/account/settings/">Settings</a>
+                        </li>
+                        <li><a class="settings-link" href="//live.zeto.ie/admin/">Admin</a>
+                        </li>
+                        <li><a class="settings-link logout-link" href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>

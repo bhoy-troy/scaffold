@@ -1,0 +1,29 @@
+
+
+.progress-bar {
+    color: #333;
+}
+
+.login-form {
+	margin-top: 60px;
+}
+
+form[role=login] {
+	color: #5d5d5d;
+	background: #f2f2f2;
+	padding: 26px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+form[role=login] .input-group,
+	form[role=login] button {
+		font-size: 18px;
+		margin: 16px 0;
+	}
+
+
+	form[role=login] > div {
+		text-align: center;
+	}

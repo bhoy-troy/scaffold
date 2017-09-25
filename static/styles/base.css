@@ -1,0 +1,99 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+.logo-container {
+  margin: 1em auto;
+}
+
+.logo {
+  animation: bounceIn 0.6s;
+  transform: rotate(0deg) scale(1) translateZ(0);
+  transition: all 0.4s cubic-bezier(.8,1.8,.75,.75);
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: rotate(180deg) scale(1);
+}
+
+/*.bubble { fill: #e76853; }*/
+.icon { fill:  #fff; }
+
+@keyframes bounceIn {
+  0% {
+    opacity: 1;
+    transform: scale(.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(black, white);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.user-nav .dropdown.dropdown-toggle{
+
+}
+
+.user-nav .open>a, .user-nav .open>a:focus, .user-nav .open>a:hover {
+    background-color: red;
+    border-color: #337ab7;
+}
+
+.user-nav .open>a, .user-nav .open>a:focus, .user-nav .open>a:hover {
+    background-color: red;
+    border-color: #337ab7;
+}
+
+.user-nav .dropdown.dropdown-toggle:hover{
+    background-color: red;
+
+}
+
+
+ /*footer area */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 60px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #000;
+}
+
+footer .container .my-site {
+	text-align: center;
+	/*margin-top:  !important;*/
+	/*margin-bottom: .5em;*/
+    width: 50%;
+    margin: 1em auto;
+}

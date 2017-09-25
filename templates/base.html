@@ -1,0 +1,33 @@
+{% load static %}
+{% load hijack_tags %}
+{#{% load staticfiles %}#}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{%  block  title %}Index{%  endblock  %}</title>
+    {% block styles %}
+        {%  include 'styles.html' %}
+    {%  endblock %}
+
+</head>
+<body>
+{% block nav %}
+{%  include 'nav.html' %}
+{% endblock %}
+{#{% block container %}#}
+{##}
+{#{%  endblock %}#}
+{#{% include 'footer.html' %}#}
+</body>
+
+{% block scripts %}
+{% include 'scripts.html' %}
+{% endblock %}
+
+{% hijack_notification %}
+
+</html>
