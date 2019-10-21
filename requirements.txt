@@ -2,7 +2,7 @@ certifi==2017.7.27.1
 chardet==3.0.4
 coreapi==2.3.1
 coreschema==0.0.4
-Django==1.11.5
+Django==1.11.23
 django-appconf==1.0.2
 django-compat==1.0.14
 dj-database-url==0.4.2
