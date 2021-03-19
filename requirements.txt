@@ -12,7 +12,7 @@ django-filter==1.0.4
 django-hijack==2.1.4
 django-hijack-admin==2.1.4
 django-user-accounts==2.0.3
-djangorestframework==3.6.4
+djangorestframework==3.11.2
 gunicorn==19.7.1
 idna==2.6
 itypes==1.1.0
