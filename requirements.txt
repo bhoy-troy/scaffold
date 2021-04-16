@@ -6,7 +6,7 @@ Django==1.11.5
 django-appconf==1.0.2
 django-compat==1.0.14
 dj-database-url==0.4.2
-django-debug-toolbar==1.8
+django-debug-toolbar==1.11.1
 django-extensions==1.9.0
 django-filter==1.0.4
 django-hijack==2.1.4
